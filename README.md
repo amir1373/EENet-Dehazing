@@ -101,6 +101,21 @@ The notebook will also:
 
 ---
 
+
+---
+
+## 📊 Quantitative Results
+
+| Method                   | Dataset     | PSNR ↑ | SSIM ↑   |
+|--------------------------|-------------|--------|----------|
+| DCP (He et al.)          | RESIDE-6K   | 17.34  | 0.74     |
+| AOD-Net (Li et al.)      | RESIDE-6K   | 19.12  | 0.78     |
+| EENet (Ours)             | RESIDE-6K   | 21.45  | 0.81     |
+| EENet (RB-Dust Fine-Tuned) | RB-Dust   | **24.72** | **0.7015** |
+
+These values are derived from our validation results and evaluation script on the corresponding datasets.
+
+
 ## 🛠 Features
 
 - Multi-resolution encoder/decoder
