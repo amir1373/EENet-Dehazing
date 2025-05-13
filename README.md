@@ -119,7 +119,7 @@ This implementation is based on the paper:
 > **EENet: Frequency-Aware and Spatially Multiscale Network for Single Image Dehazing**  
 > *Shuang Xu, Ruichen Zhao, Bingchen Zhao, Yinqiang Zheng, and Kun Zhou*  
 > In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023.  
-> [Paper link](https://doi.org/10.1109/CVPR52729.2023.01574)
+> [Paper link](https://doi.org/10.1016/j.patcog.2024.111074)
 
 ```bibtex
 @inproceedings{xu2023eenet,
