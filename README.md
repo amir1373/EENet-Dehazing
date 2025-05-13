@@ -1,5 +1,5 @@
 # EENet-Dehazing
-
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/eenet-frequency-aware-and-spatially/image-dehazing-on-rb-dust)](https://paperswithcode.com/sota/image-dehazing-on-rb-dust?p=eenet-frequency-aware-and-spatially)
 This repository contains a PyTorch implementation of **EENet**, a dual-domain network that integrates frequency-aware and spatial multiscale features for single image dehazing. The model is trained on RESIDE-6K and fine-tuned on the RB-Dust industrial dataset.
 
 ---
