@@ -95,13 +95,13 @@ This work is based on the following paper:
 
 ## 👥 Contributors
 
-- **Seyed Amirhossein Moshtaghioun** – Implementation, training, fine-tuning, and evaluation  
+- **Seyed Amirhossein Moshtaghioun**
   🔗 [GitHub](https://github.com/amir1373) · 🌐 [Website](https://roboticswith.me)
 
-- **Dr. Mehran Mehrandezh** – Academic guidance and supervision  
+- **Dr. Mehran Mehrandezh** 
   🏫 University of Regina · 📧 Mehran.Mehrandezh@uregina.ca
 
-- **Ali Mohammadi** – Dataset review and discussion support  
+- **Ali Mohammadi**
   📧 ali_mohammadi@yahoo.com
 
 > Special thanks to the authors of the original EENet paper.
