@@ -101,7 +101,7 @@ This work is based on the following paper:
 - **Dr. Mehran Mehrandezh** 
   🏫 University of Regina · 📧 Mehran.Mehrandezh@uregina.ca
 
-- **Ali Mohammadi**
+- **Dr. Ali Mohammadi**
   📧 ali_mohammadi@yahoo.com
 
 > Special thanks to the authors of the original EENet paper.
