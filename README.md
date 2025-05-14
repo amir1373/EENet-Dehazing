@@ -69,9 +69,13 @@ For full training, evaluation, and visualization scripts, see the [scripts](scri
 
 Below is a composite visualization showing dusty input images, EENet outputs, and ground truth side-by-side.
 
-![Sample Results](results/Best1.png)
-
-> 📝 The `results/Best1.png` should include 1 grouped examples with input/output/GT alignment.
+![Sample Results](results/Sample1.png)
+![Sample Results](results/Sample2.png)
+![Sample Results](results/Sample3.png)
+![Sample Results](results/Sample4.png)
+![Sample Results](results/Sample5.png)
+![Sample Results](results/Sample6.png)
+> 📝 The `results/Sample1.png` should include 1 grouped examples with input/output/GT alignment.
 
 ---
 
