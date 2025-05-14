@@ -6,7 +6,6 @@
 
 This repository contains a PyTorch implementation of **EENet**, a dual-domain network that integrates frequency-aware and spatial multiscale features for single image dehazing. The model is trained on RESIDE-6K and fine-tuned on the RB-Dust industrial dataset.
 
-
 ---
 
 ## 🧠 Model Overview
@@ -16,6 +15,14 @@ EENet leverages:
 - **Spatial Processing Modules (SPM)** with residual CNNs
 - **Dual-Domain Interaction Modules (DIM)** to fuse frequency and spatial features
 - A U-Net-style encoder-decoder structure with skip connections
+
+---
+
+## 🧬 Model Architecture
+
+Below is a schematic diagram of the EENet model architecture, showing its dual-domain structure with frequency and spatial processing modules.
+
+![EENet Architecture](assets/EENet_architecture.png)
 
 ---
 
@@ -45,7 +52,7 @@ model.eval()
 # Output: Tensor of shape [B, 3, 256, 256] (dehazed output)
 ```
 
-For full training, evaluation, and visualization scripts, see the [notebooks](notebooks/) and [scripts](scripts/) directories.
+For full training, evaluation, and visualization scripts, see the [scripts](scripts/) directories.
 
 ---
 
@@ -58,10 +65,20 @@ For full training, evaluation, and visualization scripts, see the [notebooks](no
 
 ---
 
+## 🖼 Sample Results
+
+Below is a composite visualization showing dusty input images, EENet outputs, and ground truth side-by-side.
+
+![Sample Results](results/Best1.png)
+
+> 📝 The `results/Best1.png` should include 1 grouped examples with input/output/GT alignment.
+
+---
+
 ## 🧪 Datasets
 
-- [RESIDE-6K](https://github.com/nttcslab/RESIDE) — synthetic outdoor haze dataset
-- **RB-Dust** — real-world industrial dust dataset (private, used for fine-tuning)
+- [RESIDE-6K](https://github.com/nttcslab/RESIDE) — synthetic outdoor haze dataset  
+- **RB-Dust** — real-world industrial dust dataset (custom, private)
 
 ---
 
@@ -73,6 +90,21 @@ This work is based on the following paper:
 > *Shuang Xu, Ruichen Zhao, Bingchen Zhao, Yinqiang Zheng, Kun Zhou*  
 > Pattern Recognition, 2024.  
 > [DOI: 10.1016/j.patcog.2024.111074](https://doi.org/10.1016/j.patcog.2024.111074)
+
+---
+
+## 👥 Contributors
+
+- **Seyed Amirhossein Moshtaghioun** – Implementation, training, fine-tuning, and evaluation  
+  🔗 [GitHub](https://github.com/amir1373) · 🌐 [Website](https://roboticswith.me)
+
+- **Dr. Mehran Mehrandezh** – Academic guidance and supervision  
+  🏫 University of Regina · 📧 Mehran.Mehrandezh@uregina.ca
+
+- **Ali Mohammadi** – Dataset review and discussion support  
+  📧 ali_mohammadi@yahoo.com
+
+> Special thanks to the authors of the original EENet paper.
 
 ---
 
