@@ -1,34 +1,125 @@
-# EENet Dehazing
+# EENet-Dehazing
 
-Python implementation workspace for EENet-style image dehazing experiments.
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/eenet-frequency-aware-and-spatially/image-dehazing-on-rb-dust)](https://paperswithcode.com/sota/image-dehazing-on-rb-dust?p=eenet-frequency-aware-and-spatially)
+![PyTorch](https://img.shields.io/badge/framework-pytorch-red)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
 
-## What This Repository Contains
+This repository contains a PyTorch implementation of **EENet**, a dual-domain network that integrates frequency-aware and spatial multiscale features for single image dehazing. The model is trained on RESIDE-6K and fine-tuned on the RB-Dust industrial dataset.
 
-- `model/` - model implementation files.
-- `scripts/` - training, evaluation, or utility scripts.
-- `utils/` - helper functions.
-- `data/` - dataset-related structure or examples.
-- `assets/` - images and documentation assets.
-- `results/` - output examples or experiment artifacts.
-- `requirements.txt` - Python dependencies.
-- `.github/workflows/python-compile.yml` - lightweight Python compile check.
+---
 
-## Setup
+## 🧠 Model Overview
+
+EENet leverages:
+
+- **Frequency Processing Modules (FPM)** using FFT-based convolution
+- **Spatial Processing Modules (SPM)** with residual CNNs
+- **Dual-Domain Interaction Modules (DIM)** to fuse frequency and spatial features
+- A U-Net-style encoder-decoder structure with skip connections
+
+---
+
+## 🧬 Model Architecture
+
+Below is a schematic diagram of the EENet model architecture, showing its dual-domain structure with frequency and spatial processing modules.
+
+![EENet Architecture](assets/EENet_architecture.png)
+
+---
+
+## 📦 Pretrained Model
+
+You can download the pretrained model directly from Kaggle using the following command:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+kaggle models instances versions download moshtaghioun/eenet/pyTorch/default/1
 ```
 
-On Windows PowerShell:
+Unzip the file and place `best_eenet.pth` in your working directory.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+---
+
+## 🚀 Usage
+
+```python
+import torch
+from model.eenet import EENet
+
+model = EENet()
+model.load_state_dict(torch.load("best_eenet.pth", map_location="cuda"))
+model.eval()
+
+# Input: Tensor of shape [B, 3, 256, 256] normalized to [0, 1]
+# Output: Tensor of shape [B, 3, 256, 256] (dehazed output)
 ```
 
-## Notes
+For full training, evaluation, and visualization scripts, see the [scripts](scripts/) directory.
 
-For reproducible experiments, document the dataset split, checkpoint initialization, training schedule, hyperparameters, and evaluation metrics used for each result.
+---
+
+## 📊 Evaluation Results
+
+| Dataset   | PSNR ↑ | SSIM ↑ |
+|-----------|--------|--------|
+| RESIDE-6K | 21.45  | 0.81   |
+| RB-Dust   | 24.72  | 0.7015 |
+
+---
+
+## 🖼 Sample Results
+
+Below are composite visualizations showing dusty input images, EENet outputs, and ground truth side-by-side.
+
+![Sample Results 1](results/Sample1.png)
+![Sample Results 2](results/Sample2.png)
+![Sample Results 3](results/Sample3.png)
+![Sample Results 4](results/Sample4.png)
+![Sample Results 5](results/Sample5.png)
+![Sample Results 6](results/Sample6.png)
+
+---
+
+## 🧪 Datasets
+
+- [RESIDE-6K](https://github.com/nttcslab/RESIDE) — synthetic outdoor haze dataset
+- **RB-Dust** — real-world industrial dust dataset (custom, private)
+
+---
+
+## 📑 Reference
+
+This work is based on the following paper:
+
+> **"EENet: Frequency-Aware and Spatially Multiscale Network for Single Image Dehazing"**<br>
+> *Shuang Xu, Ruichen Zhao, Bingchen Zhao, Yinqiang Zheng, Kun Zhou*<br>
+> Pattern Recognition, 2024.<br>
+> [DOI: 10.1016/j.patcog.2024.111074](https://doi.org/10.1016/j.patcog.2024.111074)
+
+---
+
+## 👥 Contributors
+
+- **Seyed Amirhossein Moshtaghioun**<br>
+  🔗 [GitHub](https://github.com/amir1373) · 🌐 [Website](https://roboticswith.me)
+
+- **Dr. Mehran Mehrandezh**<br>
+  🏫 University of Regina · 📧 Mehran.Mehrandezh@uregina.ca
+
+- **Dr. Ali Mohammadi**<br>
+  📧 ali_mohammadi@yahoo.com
+
+> Special thanks to the authors of the original EENet paper.
+
+---
+
+## 🪪 License
+
+This implementation is released under the MIT License.<br>
+Feel free to use, modify, and distribute — with credit.
+
+---
+
+## 🙋 Contact
+
+For questions or contributions, feel free to open an issue or reach out via [https://roboticswith.me](https://roboticswith.me).
