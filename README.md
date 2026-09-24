@@ -7,6 +7,8 @@
 
 This repository contains a PyTorch implementation of **EENet**, a dual-domain network that integrates frequency-aware and spatial multiscale features for single image dehazing. The model is trained on RESIDE-6K and fine-tuned on the RB-Dust industrial dataset.
 
+This is a simplified implementation of the published design and is separate from the authors' official code, which is available at [github.com/c-yn/EENet](https://github.com/c-yn/EENet).
+
 ---
 
 ## 🧠 Model Overview
@@ -91,9 +93,9 @@ Below are composite visualizations showing dusty input images, EENet outputs, an
 
 This work is based on the following paper:
 
-> **"EENet: Frequency-Aware and Spatially Multiscale Network for Single Image Dehazing"**<br>
-> *Shuang Xu, Ruichen Zhao, Bingchen Zhao, Yinqiang Zheng, Kun Zhou*<br>
-> Pattern Recognition, 2024.<br>
+> **"EENet: An effective and efficient network for single image dehazing"**<br>
+> *Yuning Cui, Qiang Wang, Chaopeng Li, Wenqi Ren, Alois Knoll*<br>
+> Pattern Recognition, vol. 158, art. no. 111074, 2025.<br>
 > [DOI: 10.1016/j.patcog.2024.111074](https://doi.org/10.1016/j.patcog.2024.111074)
 
 ---
