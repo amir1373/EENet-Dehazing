@@ -1,13 +1,14 @@
 # EENet-Dehazing
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/eenet-frequency-aware-and-spatially/image-dehazing-on-rb-dust)](https://paperswithcode.com/sota/image-dehazing-on-rb-dust?p=eenet-frequency-aware-and-spatially)
 ![PyTorch](https://img.shields.io/badge/framework-pytorch-red)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 
-This repository contains a PyTorch implementation of **EENet**, a dual-domain network that integrates frequency-aware and spatial multiscale features for single image dehazing. The model is trained on RESIDE-6K and fine-tuned on the RB-Dust industrial dataset.
+This repository contains a PyTorch implementation of **EENet**, a dual-domain network that integrates frequency-aware and spatial multiscale features for single image dehazing. The model is trained on RESIDE-6K and fine-tuned on the RB-Dust agricultural dust dataset.
 
-This is a simplified implementation of the published design and is separate from the authors' official code, which is available at [github.com/c-yn/EENet](https://github.com/c-yn/EENet).
+This is a simplified implementation of the published design, written from the paper's description around March 2025, without the authors' code, and published here in May 2025. It is separate from the authors' official code, which is available at [github.com/c-yn/EENet](https://github.com/c-yn/EENet).
+
+This implementation was listed on Papers with Code under Image Dehazing on RB-Dust. Papers with Code has since been discontinued, so that listing and its badge are no longer available.
 
 ---
 
@@ -85,7 +86,7 @@ Below are composite visualizations showing dusty input images, EENet outputs, an
 ## 🧪 Datasets
 
 - [RESIDE-6K](https://github.com/nttcslab/RESIDE) — synthetic outdoor haze dataset
-- **RB-Dust** — real-world industrial dust dataset (custom, private)
+- **RB-Dust** — real-world agricultural dust dataset: P. Buckel, T. Oksanen, and T. Dietmueller, "RB-Dust – A reference-based dataset for vision-based dust removal," in *Proc. IEEE/CVF CVPR Workshops*, 2023, pp. 1140–1149, doi: [10.1109/CVPRW59228.2023.00121](https://doi.org/10.1109/CVPRW59228.2023.00121)
 
 ---
 
@@ -108,8 +109,7 @@ This work is based on the following paper:
 - **Dr. Mehran Mehrandezh**<br>
   🏫 University of Regina · 📧 Mehran.Mehrandezh@uregina.ca
 
-- **Dr. Ali Mohammadi**<br>
-  📧 ali_mohammadi@yahoo.com
+- **Dr. Vali Dehrami**
 
 > Special thanks to the authors of the original EENet paper.
 
